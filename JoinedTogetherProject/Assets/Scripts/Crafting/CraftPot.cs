@@ -21,8 +21,6 @@ public class CraftPot : MonoBehaviour
         inventory = new Inventory();
         //Setup initial basic item ingredients
 
-       
-      
        //Add them to RecipiesInPlay
     }
 

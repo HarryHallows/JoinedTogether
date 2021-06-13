@@ -24,10 +24,16 @@ public class CraftSpot : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null)
         {
-            tempIngredient = eventData.pointerDrag.GetComponent<GameObject>();
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                      
-            craftPot.ingredientsInPlay.Add(tempIngredient);
+            tempIngredient = eventData.pointerDrag;
+
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition / gameObject.GetComponentInParent<Canvas>().scaleFactor;
+
+            if (eventData.pointerDrag.CompareTag("BasicIngredient"))
+            {
+                Debug.Log("Simple ingredient placed in pot");
+                craftPot.ingredientsInPlay.Add(tempIngredient);
+            }
+           
         }
     }
 }
