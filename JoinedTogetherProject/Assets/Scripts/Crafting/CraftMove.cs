@@ -28,7 +28,7 @@ public class CraftMove : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegi
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(gameObject.name + GetComponent<RectTransform>().anchoredPosition);
     }
 
     public void OnBeginDrag(PointerEventData eventData)

@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item 
+
+[CreateAssetMenu(fileName = "New Item", menuName = "Item")]
+public class Item : ScriptableObject
 {
-    public enum ItemType {Wood, Rock, Moss, Water};
+    public enum Element {Wood, Rock, Moss, Water, Dirt};
 
+    public Element element;
 
-    public ItemType itemType;
+    public Sprite artwork;
+
     public int amount;
 
+    public new string name;
+    public string customSound;
 
+    [HideInInspector]
+    public GameObject itemObject;
 }
