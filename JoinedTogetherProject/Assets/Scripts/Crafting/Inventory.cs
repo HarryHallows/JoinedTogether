@@ -2,25 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory
+public class Inventory : MonoBehaviour
 {
-    private List<Item> itemList;
+    public List<Item> items;
+    public List<Item> startItems;
 
-    public Inventory()
+   
+    private void Start()
     {
-        itemList = new List<Item>();
-
-       
-        AddItem(new Item { element = Item.Element.Rock, amount = 1 });
-
-        Debug.Log("Inventory" + itemList.Count);
-
+        foreach (Item item in startItems)
+        {
+            AddItem(item, true);
+        }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, bool startItem)
     {
-        itemList.Add(item);
+        items.Add(item);
 
-        Debug.Log(itemList);
+        GameObject itemObj = Instantiate(itemPrefab, itemPool);
+        ItemDisplay display = itemObj.GetComponent<ItemDisplay>();
+
+        if (display != null)
+            display.Setup(item);
+
+        Debug.Log(items);
     }
 }

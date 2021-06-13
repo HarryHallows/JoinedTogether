@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 753726962}
   m_Layer: 5
   m_Name: Wood
-  m_TagString: Untagged
+  m_TagString: BasicIngredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 792087282}
   m_Layer: 5
   m_Name: Moss
-  m_TagString: Untagged
+  m_TagString: BasicIngredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 1354194167}
   m_Layer: 5
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: BasicIngredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1965,7 +1965,7 @@ GameObject:
   - component: {fileID: 2098748180}
   m_Layer: 5
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: BasicIngredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
