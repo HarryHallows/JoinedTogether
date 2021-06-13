@@ -3,36 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CraftPot : MonoBehaviour, IDropHandler
+public class CraftPot : MonoBehaviour
 {
+    private Inventory inventory;
 
-    public List<GameObject> cookingIngredients = new List<GameObject>();
+    public List<Item> cookingIngredients;
+
+
+    public List<GameObject> ingredientsInPlay;
+    [SerializeField] private List<GameObject> basicIngredients = new List<GameObject>();
+
+    public GameObject spotOne, spotTwo;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventory = new Inventory();
+        //Setup initial basic item ingredients
+
+       
+      
+       //Add them to RecipiesInPlay
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-
-
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log("DROPPED ON ME");
-
-
-        if (eventData.pointerDrag != null)
-        {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-
-            //eventData.pointerDrag.GetComponent<GameObject>() += cookingPot;
-        }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
     private List<Item> itemList;
 
@@ -10,6 +10,17 @@ public class Inventory : MonoBehaviour
     {
         itemList = new List<Item>();
 
-        Debug.Log("Inventory");
+       
+        AddItem(new Item { element = Item.Element.Rock, amount = 1 });
+
+        Debug.Log("Inventory" + itemList.Count);
+
+    }
+
+    public void AddItem(Item item)
+    {
+        itemList.Add(item);
+
+        Debug.Log(itemList);
     }
 }
